@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con GIF y Redirección</title>
+    <style>
+        /* Fondo arcoíris animado */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet);
+            background-size: 1000% 1000%;
+            animation: gradientAnimation 20s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Estilo para el GIF */
+        #gif {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            width: 300px;  /* Tamaño del GIF */
+        }
+    </style>
+</head>
+<body>
+    <!-- GIF interactivo -->
+    <img id="gif" src="image.gif" alt="GIF animado">
+
+    <!-- Elemento de audio -->
+    <audio id="audio" loop autoplay>
+        <source src="audio.mp3" type="audio/mp3"> <!-- Cambia "audio.mp3" por tu archivo de audio -->
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script>
+        // Redirigir al hacer clic en el GIF
+        document.getElementById('gif').addEventListener('click', function() {
+            // Cambia la URL de destino aquí
+            window.location.href = "https://silly-gingersnap-9c9793.netlify.app/";  // URL a la que quieres redirigir
+        });
+    </script>
+</body>
+</html>
